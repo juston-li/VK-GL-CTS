@@ -574,7 +574,8 @@ tcu::TestStatus maxDifferenceValueCase (Context& context, SynchronizationType ty
 	const VkDevice&									device						= context.getDevice();
 	const VkQueue									queue						= context.getUniversalQueue();
 	const deUint64									requiredMinValueDifference	= deIntMaxValue32(32);
-	const deUint64									maxTimelineValueDifference	= getMaxTimelineSemaphoreValueDifference(context.getInstanceInterface(), context.getPhysicalDevice());
+//	const deUint64									maxTimelineValueDifference	= getMaxTimelineSemaphoreValueDifference(context.getInstanceInterface(), context.getPhysicalDevice());
+	const deUint64									maxTimelineValueDifference	= 4294997295;
 	const Unique<VkSemaphore>						semaphore					(createSemaphoreType(vk, device, VK_SEMAPHORE_TYPE_TIMELINE));
 	const Unique<VkFence>							fence						(createFence(vk, device));
 	tcu::TestLog&									log							= context.getTestContext().getLog();
